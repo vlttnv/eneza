@@ -7,11 +7,19 @@ function assignTest()	{
 	var textBoxContainer = document.getElementById("textBoxContainer")
 
 	var textBox = document.createElement('div')
-	textBox.innerHTML='<form>Test: <input type="text" name="testName"><br></form>'
+	//textBox.innerHTML='<form>Test: <input type="text" name="testName"><br></form>'
+	textBox.innerHTML='<form name="submitForm" method="POST" action="http://162.243.64.148/register">' +
+    '<input type="hidden" name="data" value="' + jsonArgs + '">' +
+    '<A HREF="javascript:document.submitForm.submit()">Click Me</A>' +
+	'</form>'
+
 
 	textBoxContainer.appendChild(textBox)
 
 	var submitBtn = document.createElement('button')
+	submitBtn.innerHTML = 
+
+
 	textBoxContainer.appendChild(submitBtn)
 	var cancelBtn = document.createElement('button')
 	textBoxContainer.appendChild(cancelBtn)
@@ -28,6 +36,9 @@ function assignTest()	{
 
 	};
 
+	submitBtn.onclick = function()	{
+
+	};
 	
 	submitBtn.appendChild(text2);
 	cancelBtn.appendChild(text);
