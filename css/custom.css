@@ -1,0 +1,14 @@
+body {
+	background-color: #000; /* Just for the example */
+}
+.col-xs-12 {
+	background-color: #fff; /* Just for the example */
+}
+
+.col-xs-8 {
+	background-color: #ccc; /* Just for the example */
+}
+
+.col-xs-3 {
+	background-color: #ccc; /* Just for the example */
+}
