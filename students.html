@@ -7,16 +7,33 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
   <script src="studentsJS.js" type="text/javascript"></script>
+
 </head>
-<body>
+<body onload="studentsJS()">
   <div class="container">
     <h1 class="title">Students</h1>
 
-    <div id="studenthere" class="row homemenu">
-      <button onclick="studentsJS()">Click me</button>
-    </div>
+    <div id="studenthere" class="row homemenu"> </div>
+    
+   <div class="container">
+    <div class="row">
+      <div class="col-xs-3">
+        <p>Name</p>
+      </div>
+      <div class="col-xs-3">
+        <p>Gender</p>
+      </div>
+      <div class="col-xs-3">
+        <p>School Name</p>
+      </div>
+      <div class="col-xs-3">
+        <p>Region</p>
+      </div>
+    </div><!--row-->
 
-  </div>
+
+
+  </div><!--container-->
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.js"></script>
