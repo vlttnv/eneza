@@ -13,6 +13,14 @@ function assignTest()	{
     '<A HREF="javascript:document.submitForm.submit()">Click Me</A>' +
 	'</form>'
 
+	$.ajax(
+		{
+			type: 'POST',
+			url: ,
+			data: {}
+		}
+	)
+
 
 	textBoxContainer.appendChild(textBox)
 
