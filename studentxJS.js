@@ -17,7 +17,6 @@ function assignTest()	{
 		}
 	)
 */
-
 	textBoxContainer.appendChild(textBox)
 
 	var submitBtn = document.createElement('button')
@@ -41,9 +40,6 @@ function assignTest()	{
 		assignBigBtn.style.display = "block"
 
 	};
-
-	
-
 	submitBtn.onclick = function()	{
 		var inputText = document.getElementById('textbox')
 		var testname = inputText.value
@@ -51,6 +47,4 @@ function assignTest()	{
 		console.log(testname)
 	};
 
-	
-	
 }
