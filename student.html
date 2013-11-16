@@ -29,7 +29,12 @@
   <p>Functions from this page: Assign a test and view test scores</p>
   </div><!--container-->
 
-  <div class="bigbutton col-xs-3"><p>Assign Test</p></div>
+  <div onclick="assignTest()" class="bigbutton col-xs-3"><p>Assign Test</p></div>
+  <div id="textBoxContainer">
+    <form>
+        Test: <input type="text" name="testName"><br>
+    </form>
+  </div>
   
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
