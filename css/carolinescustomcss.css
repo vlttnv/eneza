@@ -18,3 +18,10 @@ h1.title	{
 .column	{
 	
 }
+
+.bigbutton	{
+
+	background-color: #F75D6D;
+	border:2px solid;
+	border-radius:5px;
+}
