@@ -7,20 +7,16 @@ function assignTest()	{
 	var textBoxContainer = document.getElementById("textBoxContainer")
 
 	var textBox = document.createElement('div')
-	//textBox.innerHTML='<form>Test: <input type="text" name="testName"><br></form>'
-	textBox.innerHTML='<form name="submitForm" method="POST" action="http://162.243.64.148/register">' +
-    '<input type="hidden" name="data" value="' + jsonArgs + '">' +
-    '<A HREF="javascript:document.submitForm.submit()">Click Me</A>' +
-	'</form>'
-
+	textBox.innerHTML='<form>Test: <input type="text" name="testName" id="textbox"><br></form>'
+	/*
 	$.ajax(
 		{
 			type: 'POST',
-			url: ,
+			url: 'http://162.243.64.148/register' ,
 			data: {}
 		}
 	)
-
+*/
 
 	textBoxContainer.appendChild(textBox)
 
@@ -35,6 +31,8 @@ function assignTest()	{
 
 	var text = document.createTextNode("Cancel")
 	var text2 = document.createTextNode("Assign")
+	submitBtn.appendChild(text2);
+	cancelBtn.appendChild(text);
 
 	cancelBtn.onclick = function()	{
 		textBoxContainer.removeChild(textBox)
@@ -44,10 +42,15 @@ function assignTest()	{
 
 	};
 
-	submitBtn.onclick = function()	{
-
-	};
 	
-	submitBtn.appendChild(text2);
-	cancelBtn.appendChild(text);
+
+	submitBtn.onclick = function()	{
+		var inputText = document.getElementById('textbox')
+		var testname = inputText.value
+		//gets the text out the input text box field. Will need this to send request
+		console.log(testname)
+	};
+
+	
+	
 }
