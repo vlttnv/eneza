@@ -1,0 +1,16 @@
+.row.homemenu	{
+	/*height:50px;*/
+	background-color: #ffffff;
+	border-style:solid;
+	border-width:3px;
+	border-color:#207cca;
+}
+
+.menutext	{
+	color:#207cca;
+	font-size: 1.5em;
+}
+
+h1.title	{
+	color: #207cca;
+}
