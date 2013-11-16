@@ -10,11 +10,11 @@ function newStudent(id, name, gender, school, region)	{
 	var newStudentDiv = document.createElement('tr')
 	// newStudentDiv.className="row"
 	innerhtml = 
-	  '<a href="student.html?userid=' + id + '>"<td>' + id + '</td>' +
-      '<td>' + name + '</td>' +
+	  '<td>' + id + '</td>' +
+      '<td><a href="student.html?userid=' + id + '">' + name + '</a></td>' +
       '<td>' + gender + '</td>' + 
       '<td>' + school + '</td>' +
-      '<td>' + region + '</td></a>'
+      '<td>' + region + '</td>'
 
 	newStudentDiv.innerHTML = innerhtml
 

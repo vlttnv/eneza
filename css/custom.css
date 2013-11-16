@@ -47,3 +47,12 @@ select {
 .small-font {
 	font-size: 70%;
 }
+thead {
+	background-color: #BF202F;
+}
+.table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
+	border-bottom-width: 1px;
+}
+th {
+	color: #fff;
+}
