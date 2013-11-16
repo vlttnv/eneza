@@ -44,3 +44,6 @@ select {
 	border-radius: 4px;
 	border-color: #ccc;
 }
+.small-font {
+	font-size: 90%;
+}
