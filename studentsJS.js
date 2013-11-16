@@ -7,15 +7,14 @@ function studentsJS(){
 
 function newStudent(id, name, gender, school, region)	{
 
-	var newStudentDiv = document.createElement('div')
-	newStudentDiv.className="row"
-	innerhtml = '<a href="./student.html?userid=' + id + '">' +
-	  '<div class="col-xs-1"><p>' + id + '</p>' +
-      '</div><div class="col-xs-3"><p>' + name + '</p>' +
-      '</div><div class="col-xs-2"><p>' + gender + '</p>' + 
-      '</div><div class="col-xs-3"><p>' + school + '</p>' +
-      '</div><div class="col-xs-3"><p>' + region + '</p></div>' +
-      '</form>'
+	var newStudentDiv = document.createElement('tr')
+	// newStudentDiv.className="row"
+	innerhtml = 
+	  '<a href="student.html?userid=' + id + '>"<td>' + id + '</td>' +
+      '<td>' + name + '</td>' +
+      '<td>' + gender + '</td>' + 
+      '<td>' + school + '</td>' +
+      '<td>' + region + '</td></a>'
 
 	newStudentDiv.innerHTML = innerhtml
 
