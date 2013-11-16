@@ -22,3 +22,11 @@ function newStudent(id, name, gender, school, region)	{
 
 	document.getElementById("studentrows").appendChild(newStudentDiv)
 }
+
+function postRegistration()	{
+
+	//jsonArgs = name password mobile_number user_type
+	var jsonArgs = {'name':"John Doe", 'password': "blank", 'mobile_number': "03838", 'user_type': "student"}
+	xmlhttp.open("POST", "http://api.enexaeducation.com/registration?" + jsonArgs)
+	xmlhttp.send();
+}
