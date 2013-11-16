@@ -1,5 +1,8 @@
+@font-face { font-family: Gothic; src: url('../fonts/gothic.ttf'); } 
 body {
+font-family: Gothic;
   background-color: #eee;
+  background-image: url("../img/bg.png");
 }
 .form-signin .checkbox {
   font-weight: normal;
@@ -14,6 +17,18 @@ body {
 
 
 .input-group {
-	
+
 	margin-bottom: 4px
+}
+.btn-primary {
+	background-color: #BF202F;
+	border-color: #BF202F;
+}
+a {
+	color: #0099C5;
+	text-decoration: none;
+}
+a:hover {
+	color: #0099C5;
+	text-decoration: none;
 }
