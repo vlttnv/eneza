@@ -24,11 +24,22 @@ font-family: Gothic;
 	background-color: #BF202F;
 	border-color: #BF202F;
 }
+.btn-primary:hover {
+	background-color: #DF5461;
+	border-color: #DF5461;
+}
 a {
 	color: #0099C5;
 	text-decoration: none;
 }
 a:hover {
-	color: #0099C5;
+	color: #39BDE2;
 	text-decoration: none;
+}
+select {
+	width: 100%;
+	margin: 4px 0 8px 0;
+	padding: 4px;
+	border-radius: 4px;
+	border-color: #ccc;
 }
