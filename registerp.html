@@ -12,8 +12,8 @@
     var name = document.getElementById("nName").value;
     var email = document.getElementById("eEmail").value;
     var phone = document.getElementById("pPhone").value;
-    var data = {"name":name, "password":"pass1234", "mobile_number":phone, "email":email, "user_type":"public"}
-    var text = {"url":"http://162.243.64.148:80/regestration", "data":data}
+    var data = {name:name, password:"pass1234", mobile_number:phone, email:email, user_type:"public"}
+    var text = "api:" + JSON.stringify({url:"http://162.243.64.148:80/registration/", data: data, type: "P"})
     return text;
   }
   
