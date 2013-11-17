@@ -13,14 +13,26 @@
   <div class="container">
    <p>This is the reports page</p>
 
-   <div id="selection">
-    <button onclick="aggregateDisplay('quizzes')">Quizzes</button>
-    <button onclick="aggregateDisplay('users')">Users</button>
-    <button onclick="aggregateDisplay('schools')">Schools</button>
-    <button onclick="aggregateDisplay('subjects')">Subjects</button>
-   </div>
+   <h3>Optional filters</h3>
+   <!--Need to specify date format-->
+   <form>Start date: <input type="text" name="startDate" id="startDate"><br>
+   End date: <input type="text" name="endDate" id="endDate"><br>
+   User ID: <input type="text" name="userID" id="userID"><br>
+   School ID: <input type="text" name="schoolID" id="schoolID"><br>
+   </form>
 
-   <div id="visualiser"></div>
+ 
+     <button onclick="getParameters()">Get Report</button>
+
+     <div id="visualiser">
+        <div id="Kiswahili"></div>
+        <div id="English"></div>
+        <div id="Science"></div>
+        <div id="KCPE"></div>
+        <div id="Mathematics"></div>
+        <div id="General Knowledge"></div>
+        <div id="Social Studies"></div>
+      </div>
   </div><!--Ends container-->
 
 
