@@ -13,7 +13,7 @@ function studentsJS(){
 function newStudent(id, name, gender, school, region)	{
 
 	var newStudentDiv = document.createElement('tr')
-	// newStudentDiv.className="row"
+	/*Dynamically adds users to the table so table large enough*/
 	innerhtml = 
 	  '<td>' + id + '</td>' +
       '<td><a href="student.html?userid=' + id + '">' + name + '</a></td>' +
@@ -22,8 +22,6 @@ function newStudent(id, name, gender, school, region)	{
       '<td>' + region + '</td>'
 
 	newStudentDiv.innerHTML = innerhtml
-
-
 	document.getElementById("studentrows").appendChild(newStudentDiv)
 }
 
@@ -37,6 +35,10 @@ function postRegistration()	{
 
 function readFile()	{
 
+	/*The JSON file is read because it can be used offline
+	The students are read one at a time
+	Iterated through
+	And displayed */
 	var jsonDiv = document.createElement("div")
 	document.getElementById("json").appendChild(jsonDiv)
 
@@ -45,6 +47,7 @@ function readFile()	{
 	students = students["students"]
 	console.log(students)
 	for (var i=0; i< students.length; i++)	{
+		/*newStudent is essesntially a factory method for a row in the table to add a student*/
 		newStudent(students[i].userID, students[i].name, students[i].Gender, students[i].School, students[i].Region)
 		
 	}
