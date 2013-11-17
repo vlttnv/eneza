@@ -1,3 +1,10 @@
+function processUser()  {
+      var parameters = location.search.substring(1).split("=");
+      var id = unescape(parameters[1]);
+      document.getElementById("user").innerHTML = id;
+
+  }
+
 function assignTest()	{
 
 	var assignBigBtn = document.getElementById("assignBig")
@@ -49,9 +56,15 @@ function assignTest()	{
 }
 
 function viewReport()	{
-	var viewReportBtn = document.getElementById("viewReport")
-	//viewReportBtn.style.display = "none"
 
-	var container = document.getElementById("container")
-	var textBoxContainer = document.getElementById("textBoxContainer")
+	var parameters = location.search.substring(1).split("=");
+    var id = unescape(parameters[1]);
+    document.getElementById("user").innerHTML = id;
+
+ 	var viewReportBtn = document.getElementById("reportBtn")
+ 
+    console.log(id)
+    window.location.href = './reports.html?userID=' + id
+      
+
 }

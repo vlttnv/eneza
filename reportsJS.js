@@ -1,3 +1,9 @@
+function loadFunction()	{
+	var parameters = location.search.substring(1).split("=");
+    var id = unescape(parameters[1]);
+
+}
+
 function aggregateDisplay(type)	{
 	var visualiser = document.getElementById("visualiser")
 	visualiser.innerHTML = ""
@@ -18,29 +24,43 @@ function getParameters()	{
 	var inSchool = input.value
 	var inGrouping = ""
 	var param = {'startDate':inStart, 'endDate':inEnd, 'userId':inUser, 'schoolId':inSchool, 'grouping':inGrouping}
-	console.log(param)
-	visualiseReport()
-	//getReport(param)
+	//var toSend = {'data': param}
+	//visualiseReport()
+	//var toSend = JSON.stringify(param)
+	//console.log(toSend)
+	//getReport(toSend)
+	getReport(param)
 }
 
 function haveParameters(id)	{
 	//This method is for if being called from a student, so we know we are grabbing a user_ids report
 
 	var userField = document.getElementById('userID')
-	var param = {'startDate':"", 'endDate':"", 'userId':id, 'schoolId':"", 'grouping':""}
-	console.log(param)
-	visualiseReport()
+	userField.value = id
+
+	var param = {'start_date':"", 'end_date':"", 'user_id':id, 'school_id':"", 'grouping':""}
+	
+	
 }
 
 function getReport(jsonparam)	{
+	//var toSend = {"url": 'http://162.243.64.148/reports/', "data": JSON.stringify(jsonparam)}
 	$.ajax(
 		{
+			crossDomain: true,
 			type: 'POST',
-			url: 'http://162.243.64.148/reports' ,
-			data: jsonparam
+			url: 'http://162.243.64.148/reports/',
+			dataType: 'json',
+			data: jsonparam,
+			success:handleData
 		}
 	)
 }
+
+function handleData(data)	{
+	console.log(data)
+}
+
 
 function visualiseReport()	{
 
