@@ -3,7 +3,7 @@ function studentsJS(){
 	newStudent("1", "John Doe", "Male", "Foo", "Bar")
 	newStudent("2", "Jane Doe", "Female", "Foo", "Bar")
 
-	readfile('messagejson.txt')
+	readFile()
 
 }
 
@@ -44,5 +44,5 @@ function readFile()	{
 	    console.error("File could not be read! Code " + event.target.error.code);
 	};
 
-	reader.readAsText(file);
+	reader.readAsText('messagejson.txt');
 }
