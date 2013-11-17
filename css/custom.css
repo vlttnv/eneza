@@ -32,6 +32,10 @@ a {
 	color: #0099C5;
 	text-decoration: none;
 }
+.btn-info {
+	background-color: #0099C5;
+	border-color: #39BDE2;
+}
 a:hover {
 	color: #39BDE2;
 	text-decoration: none;
