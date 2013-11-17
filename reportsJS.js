@@ -33,7 +33,7 @@ function readFile(id)	{
 	report = report["reports"]
 	console.log(report)
 
-	
+	document.getElementById("subjectrows").innerHTML=""
 	
 	var innerhtml = ''
 	for (var i=0; i< report.length; i++)	{
