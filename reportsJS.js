@@ -14,35 +14,50 @@ function aggregateDisplay(type)	{
 
 function getParameters()	{
 
-	
 	input = document.getElementById('userID')
 	var inUser = input.value
 	
 	var param = {'userId':inUser}
 	
-	readFile()
+	readFile(inUser)
 }
 
 
 
-function readFile()	{
+function readFile(id)	{
 
-	var jsonDiv = document.createElement("div")
-	document.getElementById("json").appendChild(jsonDiv)
 
 	var jsonReturned
 	var message = getJSON()
 	report = jQuery.parseJSON(message)
-	report = report["report"]
+	report = report["reports"]
 	console.log(report)
+
 	
+	
+	var innerhtml = ''
 	for (var i=0; i< report.length; i++)	{
-		if (report.userID == "1")	{
-			jsonReturned = report
+		if (report[i].userID == String(id))	{
+			grades = report[i].grades
+			for (var j=0; j<grades.length; j++)	{
+				
+				var newSubjectDiv = document.createElement('tr')
+
+				innerhtml = '<td>' + grades[j].subject_name + '</td>' +
+      			'<td>' + grades[j].average + '</td>'
+
+      			newSubjectDiv.innerHTML = innerhtml
+				document.getElementById("subjectrows").appendChild(newSubjectDiv)
+			}
+			//console.log(report[i].grades)
+
+			/*
+			
+			*/
+
 		}
 		
 	}
-
 
 	/*var visualiser = document.getElementById('visualiser')
 	var subject = visualiser.childNodes

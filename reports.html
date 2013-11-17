@@ -9,7 +9,7 @@
   <link href="css/carolinescustomcss.css" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <script src="reportsJS.js" type="text/javascript"></script>
-  <script src="reportjson.js" type="text/javascript"></script>
+  <script src="reportsjson.js" type="text/javascript"></script>
 </head>
 <body onload="loadFunction()">
   <div class="navbar navbar-default navbar-static-top" role="navigation">
@@ -48,6 +48,21 @@
 
  
      <button onclick="getParameters()">Get Report</button>
+
+     <div class="row">
+          <div class="col-xs-12">
+            <table class="table table-bordered table-striped table-hover" >
+              <thead>
+                <tr>
+                  <th>Subject Name</th>
+                  <th>Grade</th>
+                </tr>
+              </thead>
+              <tbody id="subjectrows">
+              </tbody>
+            </table>
+          </div>
+    </div>
 
      <div id="visualiser">
         <div id="Kiswahili"></div>
