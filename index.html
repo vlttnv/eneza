@@ -7,6 +7,8 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="css/custom.css" rel="stylesheet">
+
+  
 </head>
 <body>
  <div class="container">
@@ -19,14 +21,14 @@
 
     <div class="input-group margin-bottom-sm">
       <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-      <input class="form-control" type="text" placeholder="Email address">
+      <input id="val1" class="form-control" type="text" placeholder="Email address">
     </div>
     <div class="input-group">
       <span class="input-group-addon"><i class="fa fa-key"></i></span>
-      <input class="form-control" type="password" placeholder="Password">
+      <input id="val2" class="form-control" type="password" placeholder="Password">
     </div>
 
-    <a href="home.html" class="btn btn-lg btn-primary btn-block" type="submit">Login <i class="fa fa-arrow-circle-o-right"></i></a>
+    <a href="home.html"  class="btn btn-lg btn-primary btn-block" type="submit">Login <i class="fa fa-arrow-circle-o-right"></i></a>
     <a href="choose.html" class="btn btn-lg btn-info btn-block" type="submit">Sign up <i class="fa fa-arrow-circle-o-right"></i></a>
 
     <button onclick='window.Android.sendData("api: {url: \"http://example.com\", data: {}, type: \"POST\"}");' class="btn btn-lg btn-info btn-block">Send data <i class="fa fa-arrow-circle-o-right"></i></button>
