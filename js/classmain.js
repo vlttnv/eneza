@@ -25,38 +25,43 @@ function newClass(id, name, average)	{
 
 function getClassesData()	{
 	//jsonArgs = name password mobile_number user_type
-	var jsonArgs = {'school':"X"}
+	var jsonArgs = {'school':"name"}
 	var xmlHttp = new XMLHttpRequest()
+	xmlHttp.onload = hanldeClassData()
 	xmlHttp.open("POST", "http://api.enexaeducation.com/getClasses?" + jsonArgs)
 	xmlHttp.send()
 }
 
 function addClass() {
-	sendAddClass("000", "NEWCLASS")
+	sendAddRequest("000", "NEWCLASS")
 }
 
 function deleteClass() {
 	var deleteBoxes = document.getElementsByName("delete")
 	for (var i=0; i<deleteBoxes.length; i++) {
 		if (deleteBoxes[i].checked)
-			sendDeleteClass(deleteBoxes.value)
+			sendDeleteRequest(deleteBoxes.value)
 	}
 }
 
 function sendAddRequest(id, name) {
-	var jsonArgs = {'id':"id", 'name': "name"}
-	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.onload = hanldeAddReponse();
+	var jsonArgs = {'id':id, 'name': name}
+	var xmlHttp = new XMLHttpRequest()
+	xmlHttp.onload = handleAddReponse()
 	xmlHttp.open("GET", "http://api.enezaeducation.com/add?" + jsonArgs)
 	xmlHttp.send()
 }
 
 function sendDeleteRequest(id) {
 	var jsonArgs = {'id':"id"}
-	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.onload = handleDeleteReponse();
+	var xmlHttp = new XMLHttpRequest()
+	xmlHttp.onload = handleDeleteReponse()
 	xmlHttp.open("GET", "http://api.enezaeducation.com/delete?" + jsonArgs)
 	xmlHttp.send()
+}
+
+function hanldeClassData() {
+	
 }
 
 function handleAddReponse() {
