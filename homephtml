@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/carolinescustomcss.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Static navbar -->
+  <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Teacher</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="students.html"><i class="fa fa-users"></i> Students</a></li>
+          <li><a href="#about"><i class="fa fa-book"></i> Classes</a></li>
+          <li><a href="#contact"><i class="fa fa-pencil"></i> Tests</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu"> -->
+                <li><a href="#"><i class="fa fa-refresh"></i> Pending</a></li>
+                <li><a href="#"><i class="fa fa-tachometer"></i> Reports</a></li>
+                <li><a href="#"><i class="fa fa-star"></i> Awards</a></li>
+                <!-- <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li> -->
+              <!-- </ul>
+            </li> -->
+          </ul>
+          <!-- <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li class="active"><a href="./">Static top</a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+          </ul> -->
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+      <img style="width:140px; height:140px" class="img-circle center-block img-responsive" src="img/brad.jpg" alt="Generic placeholder image">
+      <br>
+      <div class="container">
+        <div class="row">
+          <a href="#"><a href="#"><div class="col-xs-4 well text-center"><i class="fa fa-file-text-o fa-3x"></i> <span class="small-font">View Performance</span></div></a>
+          <a href="#"><div class="col-xs-4 well text-center"><i class="fa fa-pencil-square-o fa-3x"></i>Create a Quiz</div></a>
+          <a href="#"><div class="col-xs-4 well text-center"><i class="fa fa-bar-chart-o fa-3x"></i><span class="small-font">School's Performance</span></div></a>
+        </div>
+        <div class="row">
+          <a href="#"><div class="col-xs-4 well text-center"><i class="fa fa-trophy fa-3x"></i><span class="small-font">Province's Performance</span></div></a>
+          <a href="#"><div class="col-xs-4 well text-center"><i class="fa fa-files-o fa-3x"></i>Mini<br> Lessons</div></a>
+          <a href="#"><div class="col-xs-4 well text-center"><i class="fa fa-check fa-3x"></i>Tips &amp; <br>Tricks</div></a>
+        </div>
+
+      </div>
+    <!-- <h2 class="form-signin-heading text-center">MENU</h2>
+    <a href="javascript: void(0)" class="btn btn-lg btn-primary btn-block" type="submit">Students <i class="fa fa-users"></i></a>
+    <a href="javascript: void(0)" class="btn btn-lg btn-primary btn-block" type="submit">Classes <i class="fa fa-users"></i></a>
+    <a href="javascript: void(0)" class="btn btn-lg btn-primary btn-block" type="submit">Tests <i class="fa fa-pencil"></i></a>
+    <a href="javascript: void(0)" class="btn btn-lg btn-primary btn-block" type="submit">Pending <i class="fa fa-refresh"></i></a>
+    <a href="javascript: void(0)" class="btn btn-lg btn-primary btn-block" type="submit">Reports <i class="fa fa-tachometer"></i></a>
+    <a href="javascript: void(0)" class="btn btn-lg btn-primary btn-block" type="submit">Awards <i class="fa fa-star"></i></a>
+
+    <br> -->
+
+    <h5>YOUR CHILD'S ACTIVITY FEED</h5>
+    <div class="container well">
+      <p>You added a new quiz <br> <span style="color: #0099C5;">5 days ago <i class="fa fa-flask"></i></span></p>
+      <hr>
+      <p>You generated a report for a student <br> <span style="color: #0099C5;">6 days ago <i class="fa fa-plus-square"></i></span></p>
+      <hr>
+      <p>You added a student <br> <span style="color: #0099C5;">1 week ago <i class="fa fa-flask"></i></span></p>
+      <hr>
+      <p>You  modified a quiz <br> <span style="color: #0099C5;">2 weeks ago <i class="fa fa-flask"></i></span></p>
+    </div>
+  </div>
+  <!-- /container -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/holder.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@ function assignTest()	{
 	var textBoxContainer = document.getElementById("textBoxContainer")
 
 	var textBox = document.createElement('div')
-	textBox.innerHTML='<form>Test: <input type="text" name="testName" id="textbox"><br></form>'
+	textBox.innerHTML='<form>Test: <input id="textbox" class="form-control" type="text" placeholder="Test ID"><br></form>'
 	/*
 	$.ajax(
 		{
