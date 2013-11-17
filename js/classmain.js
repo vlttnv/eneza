@@ -23,6 +23,14 @@ function newClass(id, name, average)	{
 	document.getElementById("classrows").appendChild(newClassDiv)
 }
 
+function getClassesData()	{
+	//jsonArgs = name password mobile_number user_type
+	var jsonArgs = {'school':"X"}
+	var xmlHttp = new XMLHttpRequest()
+	xmlHttp.open("POST", "http://api.enexaeducation.com/getClasses?" + jsonArgs)
+	xmlHttp.send()
+}
+
 function addClass() {
 	sendAddClass("000", "NEWCLASS")
 }
@@ -35,24 +43,26 @@ function deleteClass() {
 	}
 }
 
-function getClassesData()	{
-	//jsonArgs = name password mobile_number user_type
-	var jsonArgs = {'school':"X"}
-	var xmlHttp = new XMLHttpRequest()
-	xmlHttp.open("POST", "http://api.enexaeducation.com/getClasses?" + jsonArgs)
-	xmlHttp.send()
-}
-
-function sendAddClass(id, name) {
+function sendAddRequest(id, name) {
 	var jsonArgs = {'id':"id", 'name': "name"}
 	var xmlHttp = new XMLHttpRequest();
-	xmlhttp.open("GET", "http://api.enezaeducation.com/add?" + jsonArgs)
-	xmlhttp.send()
+	xmlHttp.onload = hanldeAddReponse();
+	xmlHttp.open("GET", "http://api.enezaeducation.com/add?" + jsonArgs)
+	xmlHttp.send()
 }
 
-function sendDeleteClass(id) {
+function sendDeleteRequest(id) {
 	var jsonArgs = {'id':"id"}
 	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.onload = handleDeleteReponse();
 	xmlHttp.open("GET", "http://api.enezaeducation.com/delete?" + jsonArgs)
 	xmlHttp.send()
+}
+
+function handleAddReponse() {
+
+}
+
+function handleDeleteReponse() {
+
 }
