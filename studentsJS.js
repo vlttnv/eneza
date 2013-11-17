@@ -1,7 +1,10 @@
 function studentsJS(){
 	
-	newStudent("1", "John Doe", "Male", "Foo", "Bar")
-	newStudent("2", "Jane Doe", "Female", "Foo", "Bar")
+	/*no database with just students, this pulls all types of users
+	*this calls the phone server which makes the request to get data, the return text is written to a file
+	*this file is read below to display the content
+	*/
+	//window.Android.users()
 
 	readFile()
 

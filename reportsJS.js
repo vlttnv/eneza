@@ -26,6 +26,12 @@ function getParameters()	{
 
 function readFile(id)	{
 
+	/*no data for reports
+	*this calls the phone server which makes the request to get data, the return text is written to a file
+	*this file is read below to display the content
+	*/
+	//window.Android.reports()
+
 
 	var jsonReturned
 	var message = getJSON()
