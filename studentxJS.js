@@ -27,7 +27,7 @@ function assignTest()	{
 	textBoxContainer.appendChild(textBox)
 
 	var submitBtn = document.createElement('button')
-	submitBtn.innerHTML = 
+	// submitBtn.innerHTML = "Submit"
 
 
 	textBoxContainer.appendChild(submitBtn)
