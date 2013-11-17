@@ -49,11 +49,6 @@ function readFile(id)	{
       			newSubjectDiv.innerHTML = innerhtml
 				document.getElementById("subjectrows").appendChild(newSubjectDiv)
 			}
-			//console.log(report[i].grades)
-
-			/*
-			
-			*/
 
 		}
 		
