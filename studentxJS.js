@@ -46,5 +46,12 @@ function assignTest()	{
 		//gets the text out the input text box field. Will need this to send request
 		console.log(testname)
 	};
+}
 
+function viewReport()	{
+	var viewReportBtn = document.getElementById("viewReport")
+	//viewReportBtn.style.display = "none"
+
+	var container = document.getElementById("container")
+	var textBoxContainer = document.getElementById("textBoxContainer")
 }
