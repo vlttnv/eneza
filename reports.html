@@ -6,11 +6,23 @@
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
+  <script src="reportsJS.js" type="text/javascript"></script>
 </head>
 <body>
+  <h1>Reports</h1>
   <div class="container">
    <p>This is the reports page</p>
-  </div>
+
+   <div id="selection">
+    <button onclick="aggregateDisplay('quizzes')">Quizzes</button>
+    <button onclick="aggregateDisplay('users')">Users</button>
+    <button onclick="aggregateDisplay('schools')">Schools</button>
+    <button onclick="aggregateDisplay('subjects')">Subjects</button>
+   </div>
+
+   <div id="visualiser"></div>
+  </div><!--Ends container-->
+
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.js"></script>
