@@ -43,6 +43,6 @@ function readFile()	{
 	reader.onerror = function(event) {
 	    console.error("File could not be read! Code " + event.target.error.code);
 	};
-
+	
 	reader.readAsText('messagejson.txt');
 }
