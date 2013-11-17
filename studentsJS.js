@@ -34,15 +34,20 @@ function postRegistration()	{
 
 function readFile()	{
 
-	var reader = new FileReader();
-	reader.onload = function(event) {
-	    var contents = event.target.result;
-	    console.log("File contents: " + contents);
-	};
+	var jsonDiv = document.createElement("div")
+	document.getElementById("json").appendChild(jsonDiv)
 
-	reader.onerror = function(event) {
-	    console.error("File could not be read! Code " + event.target.error.code);
-	};
+	var message = getJSON()
+	students = jQuery.parseJSON(message)
+	students = students["students"]
+	console.log(students)
+	for (var i=0; i< students.length; i++)	{
+		newStudent(students[i].userID, students[i].name, students[i].Gender, students[i].School, students[i].Region)
+		
+	}
+
+
 	
-	reader.readAsText('messagejson.txt');
+	//newStudent(message["students"])
+	
 }
