@@ -14,52 +14,50 @@ function aggregateDisplay(type)	{
 
 function getParameters()	{
 
-	var input = document.getElementById('startDate')
-	var inStart = input.value
-	input = document.getElementById('endDate')
-	var inEnd = input.value
+	
 	input = document.getElementById('userID')
 	var inUser = input.value
-	input = document.getElementById('schoolID')
-	var inSchool = input.value
-	var inGrouping = ""
-	var param = {'startDate':inStart, 'endDate':inEnd, 'userId':inUser, 'schoolId':inSchool, 'grouping':inGrouping}
-	//var toSend = {'data': param}
-	//visualiseReport()
-	//var toSend = JSON.stringify(param)
-	//console.log(toSend)
-	//getReport(toSend)
-	getReport(param)
+	
+	var param = {'userId':inUser}
+	
+	readFile()
 }
 
-function haveParameters(id)	{
-	//This method is for if being called from a student, so we know we are grabbing a user_ids report
 
-	var userField = document.getElementById('userID')
-	userField.value = id
 
-	var param = {'start_date':"", 'end_date':"", 'user_id':id, 'school_id':"", 'grouping':""}
+function readFile()	{
+
+	var jsonDiv = document.createElement("div")
+	document.getElementById("json").appendChild(jsonDiv)
+
+	var jsonReturned
+	var message = getJSON()
+	report = jQuery.parseJSON(message)
+	report = report["report"]
+	console.log(report)
 	
-	
-}
-
-function getReport(jsonparam)	{
-	//var toSend = {"url": 'http://162.243.64.148/reports/', "data": JSON.stringify(jsonparam)}
-	$.ajax(
-		{
-			crossDomain: true,
-			type: 'POST',
-			url: 'http://162.243.64.148/reports/',
-			dataType: 'json',
-			data: jsonparam,
-			success:handleData
+	for (var i=0; i< report.length; i++)	{
+		if (report.userID == "1")	{
+			jsonReturned = report
 		}
-	)
+		
+	}
+
+
+	/*var visualiser = document.getElementById('visualiser')
+	var subject = visualiser.childNodes
+
+
+	for (var j = 0; j<jsonReturned.length; j++)	{
+		var grade = document.createElement('div')
+		grade.innerHTML = '<p> Grade for subject <p>'
+		var subjectDiv = document.getElementById(jsonReturned[j].subject_name)
+		subjectDiv.appendChild(grade)
+		}
+*/
 }
 
-function handleData(data)	{
-	console.log(data)
-}
+
 
 
 function visualiseReport()	{

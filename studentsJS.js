@@ -46,8 +46,4 @@ function readFile()	{
 		
 	}
 
-
-	
-	//newStudent(message["students"])
-	
 }
