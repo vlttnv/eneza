@@ -6,15 +6,32 @@
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
+  <link href="css/carolinescustomcss.css" rel="stylesheet">
+  <script src="classes.js" type="text/javascript"></script>
+
 </head>
-<body>
-  <h1>Classes</h1>
+<body onload="classesJS()">
   <div class="container">
-    
+    <h1 class="title">Classes</h1>
 
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="deleteClass()">Delete Class</button>
 
+      <div class="row">
+       <div class="col-xs-1">
+          <p>Id</p>
+        </div>
+        <div class="col-xs-3">
+          <p>Name</p>
+        </div>
+        <div class="col-xs-2">
+          <p>Average</p>
+        </div>
+      </div><!--row-->
 
+      <div id="classrows"></div>
   </div><!--container-->
+
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.js"></script>
